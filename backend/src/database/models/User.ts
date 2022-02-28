@@ -1,15 +1,8 @@
 import { Schema, model } from 'mongoose'
 
-interface User {
-	username: string
-	email: string
-	password: string
-	isAdmin: boolean
-	createdAt: Date
-	updatedAt: Date
-}
+import { IUser } from '@/@types/models'
 
-const schema = new Schema<User>(
+const schema = new Schema<IUser>(
 	{
 		username: { type: String, required: true, unique: true },
 		email: { type: String, required: true, unique: true },

@@ -20,7 +20,7 @@ app.use(morgan(morganLogger))
 app.use(cookieParser())
 
 // Routes
-app.use('/', routes)
+app.use('/api/', routes)
 
 // Catch 404 and forward to error handler
 app.use(function (_req, _res, next) {

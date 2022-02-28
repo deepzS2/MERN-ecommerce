@@ -1,16 +1,8 @@
-import { Schema, model, Types } from 'mongoose'
+import { Schema, model } from 'mongoose'
 
-interface Order {
-	userId: Types.ObjectId
-	products: { productId: Types.ObjectId; quantity: number }[]
-	amount: number
-	address: Record<string, string>
-	status: string
-	createdAt: Date
-	updatedAt: Date
-}
+import { IOrder } from '@/@types/models'
 
-const schema = new Schema<Order>(
+const schema = new Schema<IOrder>(
 	{
 		userId: { type: Schema.Types.ObjectId, required: true, ref: 'User' },
 		products: {

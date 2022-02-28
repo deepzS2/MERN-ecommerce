@@ -1,13 +1,8 @@
-import { Schema, model, Types } from 'mongoose'
+import { Schema, model } from 'mongoose'
 
-interface Cart {
-	userId: Types.ObjectId
-	products: { productId: Types.ObjectId; quantity: number }[]
-	createdAt: Date
-	updatedAt: Date
-}
+import { ICart } from '@/@types/models'
 
-const schema = new Schema<Cart>(
+const schema = new Schema<ICart>(
 	{
 		userId: { type: Schema.Types.ObjectId, required: true, ref: 'User' },
 		products: {

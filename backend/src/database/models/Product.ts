@@ -1,18 +1,8 @@
 import { Schema, model } from 'mongoose'
 
-interface Product {
-	title: string
-	desc: string
-	img: string
-	categories: string[]
-	size: string
-	color: string
-	price: number
-	createdAt: Date
-	updatedAt: Date
-}
+import { IProduct } from '@/@types/models'
 
-const schema = new Schema<Product>(
+const schema = new Schema<IProduct>(
 	{
 		title: { type: String, required: true, unique: true },
 		desc: { type: String, required: true },
