@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  ecommerce-database:
+    image: mongo
+    volumes:
+      - ./database_volume:/data/db
+    ports:
+      - "27017:27017"
+    restart: unless-stopped
+
+  ecommerce-backend:
+    build: './backend'
+    volumes:
+      - ./backend:/app/src
+      - ./backend/node_modules:/app/src/node_modules
+    environment:
+      NODE_ENV: dev
+    depends_on:
+      - ecommerce-database
+    links:
+      - ecommerce-database
+    ports:
+      - "8080:8080"

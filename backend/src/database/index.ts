@@ -1,23 +1,15 @@
-import path from 'path'
-import { Sequelize } from 'sequelize'
+import mongoose from 'mongoose'
 
-import {
-	DATABASE_HOST,
-	DATABASE_NAME,
-	DATABASE_PASSWORD,
-	DATABASE_PORT,
-	DATABASE_USERNAME,
-	NODE_ENV,
-} from '../config'
+import { MONGO_DATABASE_URI } from '@/config'
+import Logger from '@utils/logger'
 
-export default new Sequelize(
-	DATABASE_NAME,
-	DATABASE_USERNAME,
-	DATABASE_PASSWORD,
-	{
-		dialect: NODE_ENV === 'production' ? 'mysql' : 'sqlite',
-		storage: path.join(__dirname, '..', '..', 'dev.sqlite'),
-		port: parseInt(DATABASE_PORT),
-		host: DATABASE_HOST,
-	}
-)
+export default function openConnection() {
+	return mongoose
+		.connect(MONGO_DATABASE_URI)
+		.then(() => Logger.info('Connected to database!'))
+		.catch((err) =>
+			Logger.error(
+				'Something went wrong connecting to database: ' + err.message
+			)
+		)
+}

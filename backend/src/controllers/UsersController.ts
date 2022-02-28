@@ -1,12 +1,9 @@
-import { User } from '@database/models'
+import { Request, Response } from 'express'
 
 export default {
-	index: async (req, res) => {
-		const users = await User.findAll()
-		res.send(users)
-	},
-	create: async (req, res) => {
-		const user = await User.create(req.body)
-		res.send(user)
+	index: async (req: Request, res: Response) => {
+		res.send({
+			hello: 'world',
+		})
 	},
 }

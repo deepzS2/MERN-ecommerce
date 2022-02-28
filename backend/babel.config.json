@@ -6,7 +6,7 @@
     // Module resolver
     ["module-resolver", {
       "alias": {
-        "@root": ["./src"],
+        "@": ["./src"],
         "@myTypes": ["./src/@types/index"],
         "@controllers/*": ["./src/controllers/*"],
         "@database/*": ["./src/database/*"],
