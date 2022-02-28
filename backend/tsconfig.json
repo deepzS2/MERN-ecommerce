@@ -48,7 +48,8 @@
       "@/*": ["./*"],
       "@controllers/*": ["controllers/*"],
       "@database/*": ["database/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@services/*": ["services/*"],
     }
   },
   "include": ["src/**/*"],

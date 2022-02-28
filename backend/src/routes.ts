@@ -11,6 +11,8 @@ import OrdersController from '@controllers/OrdersController'
 import ProductsController from '@controllers/ProductsController'
 import UsersController from '@controllers/UsersController'
 
+import PaymentsController from './controllers/PaymentsController'
+
 const router = express.Router()
 
 // Authentication
@@ -49,5 +51,8 @@ router.get(
 router.post('/orders', verifyToken, OrdersController.create)
 router.put('/orders/:id', verifyTokenAndAdmin, OrdersController.update)
 router.delete('/orders/:id', verifyTokenAndAdmin, OrdersController.delete)
+
+// Payments
+router.post('/payment', verifyTokenAndAuthorization, PaymentsController.payment)
 
 export default router

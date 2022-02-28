@@ -1,5 +1,7 @@
 import cookieParser from 'cookie-parser'
+import cors from 'cors'
 import express from 'express'
+import helmet from 'helmet'
 import createError from 'http-errors'
 import morgan from 'morgan'
 
@@ -10,6 +12,10 @@ import routes from './routes'
 
 // App
 const app = express()
+
+// CORS and helmet
+app.use(cors())
+app.use(helmet())
 
 // JSON and URLENCODED
 app.use(express.json())

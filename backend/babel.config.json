@@ -7,9 +7,9 @@
     ["module-resolver", {
       "alias": {
         "@": ["./src"],
-        "@myTypes": ["./src/@types/index"],
         "@controllers/*": ["./src/controllers/*"],
         "@database/*": ["./src/database/*"],
+        "@services/*": ["./src/services/*"],
         "@utils/*": ["./src/utils/*"]
       }
   }]
