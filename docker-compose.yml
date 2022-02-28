@@ -9,6 +9,18 @@ services:
       - "27017:27017"
     restart: unless-stopped
 
+  ecommerce-frontend:
+    build: './frontend'
+    volumes:
+      - ./frontend:/app/src
+      - ./frontend/node_modules:/app/src/nome_modules
+    depends_on:
+      - ecommerce-backend
+    links:
+      - ecommerce-backend
+    ports:
+      - "3000:3000"
+
   ecommerce-backend:
     build: './backend'
     volumes:
