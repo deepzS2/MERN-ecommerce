@@ -2,6 +2,8 @@ FROM node:lts-alpine3.14
 
 WORKDIR /app/src
 
+ENV NODE_OPTIONS=”–max_old_space_size=2048″
+
 # Installing dependencies
 COPY package*.json yarn.lock ./
 RUN yarn install
