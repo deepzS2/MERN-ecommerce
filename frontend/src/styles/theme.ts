@@ -6,6 +6,8 @@ const theme: DefaultTheme = {
 		main: '#0070f3',
 		secondary: '#eaeaea',
 		tertiary: '#fafafa',
+		white: '#ffffff',
+		red: '#ff0000',
 	},
 }
 
