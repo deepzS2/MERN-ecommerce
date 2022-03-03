@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app'
 import { useEffect } from 'react'
 
-import Topbar from '@components/Topbar'
+import Layout from '@components/Layout'
 import ContextsProviders from '@contexts/index'
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -14,8 +14,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 	return (
 		<ContextsProviders>
-			<Topbar />
-			<Component {...pageProps} />
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
 		</ContextsProviders>
 	)
 }
