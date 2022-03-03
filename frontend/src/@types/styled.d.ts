@@ -10,6 +10,8 @@ declare module 'styled-components' {
 			tertiary: string
 			white: string
 			red: string
+			grey: string
+			green: string
 		}
 	}
 }
