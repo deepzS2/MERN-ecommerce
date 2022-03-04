@@ -1,6 +1,12 @@
 import 'styled-components'
 
 declare module 'styled-components' {
+	export interface StatusKeys {
+		pending: string
+		approved: string
+		declined: string
+	}
+
 	export interface DefaultTheme {
 		borderRadius: string
 
@@ -12,6 +18,13 @@ declare module 'styled-components' {
 			red: string
 			grey: string
 			green: string
+			lightGreen: string
+			lighterGrey: string
+
+			status: {
+				background: StatusKeys
+				color: StatusKeys
+			}
 		}
 	}
 }
