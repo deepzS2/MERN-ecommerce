@@ -5,3 +5,7 @@ export const Container = styled.main`
 	min-height: 200vh;
 	margin-top: 10px;
 `
+
+export const Widgets = styled.div`
+	display: flex;
+`
