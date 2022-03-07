@@ -1,5 +1,6 @@
 import { NextPage } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import {
 	MdPermIdentity,
 	MdCalendarToday,
@@ -26,7 +27,9 @@ const User: NextPage = () => {
 		<Container>
 			<TitleContainer>
 				<h1>Edit User</h1>
-				<button>Create</button>
+				<Link href="/newUser" passHref>
+					<button>Create</button>
+				</Link>
 			</TitleContainer>
 			<UserContainer>
 				<UserShow>
