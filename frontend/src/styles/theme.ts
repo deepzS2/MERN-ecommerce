@@ -1,6 +1,4 @@
-import { DefaultTheme } from 'styled-components'
-
-const theme: DefaultTheme = {
+const theme = {
 	borderRadius: '2rem',
 	colors: {
 		main: '#0070f3',
@@ -9,9 +7,12 @@ const theme: DefaultTheme = {
 		white: '#ffffff',
 		red: '#ff0000',
 		grey: '#555555',
+		darkGrey: '#444444',
 		green: '#00ff00',
+		darkBlue: 'darkblue',
 		lightGreen: '#3bb077',
 		lighterGrey: '#eeeef7',
+		teal: '#008080',
 		status: {
 			background: {
 				approved: '#e5faf2',

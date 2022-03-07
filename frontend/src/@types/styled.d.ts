@@ -1,30 +1,11 @@
 import 'styled-components'
+import theme from '@styles/theme'
 
 declare module 'styled-components' {
-	export interface StatusKeys {
-		pending: string
-		approved: string
-		declined: string
-	}
+	type MyTheme = typeof theme
 
-	export interface DefaultTheme {
-		borderRadius: string
+	export type StatusKey = keyof MyTheme['colors']['status']['color']
 
-		colors: {
-			main: string
-			secondary: string
-			tertiary: string
-			white: string
-			red: string
-			grey: string
-			green: string
-			lightGreen: string
-			lighterGrey: string
-
-			status: {
-				background: StatusKeys
-				color: StatusKeys
-			}
-		}
-	}
+	// eslint-disable-next-line @typescript-eslint/no-empty-interface
+	export interface DefaultTheme extends MyTheme {}
 }
