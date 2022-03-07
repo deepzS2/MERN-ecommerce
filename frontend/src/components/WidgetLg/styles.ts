@@ -1,4 +1,4 @@
-import styled, { StatusKeys } from 'styled-components'
+import styled, { StatusKey } from 'styled-components'
 
 interface StatusButtonProps {
 	statusType: string
@@ -58,7 +58,7 @@ export const StatusButton = styled.button<StatusButtonProps>`
 	border-radius: 10px;
 
 	color: ${({ statusType, theme }) =>
-		theme.colors.status.color[statusType as keyof StatusKeys]};
+		theme.colors.status.color[statusType as StatusKey]};
 	background-color: ${({ statusType, theme }) =>
-		theme.colors.status.background[statusType as keyof StatusKeys]};
+		theme.colors.status.background[statusType as StatusKey]};
 `

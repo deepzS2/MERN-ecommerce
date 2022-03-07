@@ -46,7 +46,7 @@ export const Icon = styled.div`
 	.badge {
 		position: absolute;
 		top: -5px;
-		right: 5px;
+		right: 0px;
 		background-color: ${({ theme }) => theme.colors.red};
 		color: ${({ theme }) => theme.colors.white};
 		border-radius: 50%;
