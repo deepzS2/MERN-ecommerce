@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import {
 	MdLineStyle,
@@ -8,6 +9,7 @@ import {
 	MdBarChart,
 	MdMailOutline,
 	MdDynamicFeed,
+	MdAttachMoney,
 	MdChatBubbleOutline,
 	MdWorkOutline,
 	MdReport,
@@ -41,13 +43,21 @@ const Sidebar: React.FC = () => {
 				<Menu>
 					<h3>Quick Menu</h3>
 					<ul>
+						<Link href="/users" passHref>
+							<li>
+								<MdPermIdentity size={iconsSize} />
+								Users
+							</li>
+						</Link>
+						<Link href="/products" passHref>
+							<li>
+								<MdStorefront size={iconsSize} />
+								Products
+							</li>
+						</Link>
 						<li>
-							<MdPermIdentity size={iconsSize} />
-							Users
-						</li>
-						<li>
-							<MdStorefront size={iconsSize} />
-							Analytics
+							<MdAttachMoney size={iconsSize} />
+							Transaction
 						</li>
 						<li>
 							<MdBarChart size={iconsSize} />
