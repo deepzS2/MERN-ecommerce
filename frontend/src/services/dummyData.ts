@@ -4,6 +4,10 @@ export const homeChartData = {
 	],
 }
 
+export const productChartData = {
+	Sales: [4000, 3000, 5000],
+}
+
 export const productsTableData: IProductsTableData[] = [
 	{
 		id: 1,
