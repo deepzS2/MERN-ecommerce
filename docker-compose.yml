@@ -21,6 +21,18 @@ services:
     ports:
       - "3000:3000"
 
+  frontend-admin:
+    build: '.frontend-admin'
+    volumes:
+      - ./frontend-admin:/app/src
+      - ./frontend-admin/node_modules:/app/src/node_modules
+    depends_on:
+      - ecommerce-backend
+    links:
+      - ecommerce-backend
+    ports:
+      - "3000:3001"
+
   backend:
     build: './backend'
     volumes:
