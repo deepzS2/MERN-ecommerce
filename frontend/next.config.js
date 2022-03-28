@@ -4,7 +4,18 @@ const nextConfig = {
 	images: {
 		// Domínio de imagens
 		// next/image src
-		domains: [],
+		domains: [
+			'images.pexels.com',
+			'd3o2e4jr3mxnm3.cloudfront.net',
+			'cdn.shopify.com',
+			'www.prada.com',
+			'www.burdastyle.com',
+			'images.ctfassets.ne',
+			'www.vintageindustries.nl',
+			'images.ctfassets.net',
+			'www.pngarts.com',
+			'i.ibb.co',
+		],
 	},
 	webpack(config) {
 		config.module.rules.push({

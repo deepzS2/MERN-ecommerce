@@ -15,16 +15,31 @@ export const Container = styled.div<ContainerProps>`
 		color: #000;
 	}
 
+	> div,
 	input {
-		padding: 0.8rem 1rem;
-		border: 1px solid
-			${({ invalid, theme }) => (invalid ? '#f00' : theme.colors.main)};
-		border-radius: 5px;
 		width: 100%;
+	}
+
+	> div {
+		position: relative;
+	}
+
+	input {
+		padding: 5px;
+		border: 0.5px solid
+			${({ invalid, theme }) => (invalid ? '#f00' : theme.colors.lightGray)};
+		border-radius: 5px;
 
 		&::placeholder {
 			color: darkgray;
 			font-weight: 400;
 		}
+	}
+
+	svg {
+		position: absolute;
+		right: 5px;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 `
