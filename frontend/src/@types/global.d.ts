@@ -11,6 +11,6 @@ declare module 'little-state-machine' {
 	}
 }
 
-export interface NextPageWithLayout extends NextPage {
+export type NextPageWithLayout = NextPage & {
 	getLayout?: (page: ReactElement) => JSX.Element
 }
