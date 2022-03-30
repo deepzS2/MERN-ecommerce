@@ -4,6 +4,8 @@ import { ReactElement } from 'react'
 import { NextPageWithLayout } from '@/@types/global'
 import Categories from '@components/Categories'
 import Layout from '@components/Layout'
+import Newsletter from '@components/Newsletter'
+import Products from '@components/Products'
 import Slider from '@components/Slider'
 import { Main } from '@styles/pages/Home'
 
@@ -19,6 +21,8 @@ const Home: NextPageWithLayout = () => {
 			<Main>
 				<Slider />
 				<Categories />
+				<Products />
+				<Newsletter />
 			</Main>
 		</>
 	)

@@ -1,10 +1,12 @@
 import Head from 'next/head'
 
 import { NextPageWithLayout } from '@/@types/global'
-import Layout from '@/components/Layout'
+import Layout from '@components/Layout'
+import Newsletter from '@components/Newsletter'
+import Products from '@components/Products'
 import { Main, FiltersContainer, Title, Select } from '@styles/pages/Category'
 
-const Products: NextPageWithLayout = () => {
+const Category: NextPageWithLayout = () => {
 	return (
 		<>
 			<Head>
@@ -48,13 +50,15 @@ const Products: NextPageWithLayout = () => {
 						</Select>
 					</div>
 				</FiltersContainer>
+				<Products />
+				<Newsletter />
 			</Main>
 		</>
 	)
 }
 
-Products.getLayout = (page) => {
+Category.getLayout = (page) => {
 	return <Layout>{page}</Layout>
 }
 
-export default Products
+export default Category

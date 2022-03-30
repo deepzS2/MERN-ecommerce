@@ -15,6 +15,8 @@ const nextConfig = {
 			'images.ctfassets.net',
 			'www.pngarts.com',
 			'i.ibb.co',
+			'hips.hearstapps.com',
+			'i.pinimg.com',
 		],
 	},
 	webpack(config) {

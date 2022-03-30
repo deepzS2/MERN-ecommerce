@@ -18,6 +18,7 @@ const theme = {
 		lightPink: '#fcf1ed',
 		lighterPink: '#fbf0f4',
 		lightBlue: '#e9f5f5',
+		black: '#000',
 	},
 }
 
