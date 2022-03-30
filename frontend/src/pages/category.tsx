@@ -1,9 +1,10 @@
-import { NextPage } from 'next'
 import Head from 'next/head'
 
+import { NextPageWithLayout } from '@/@types/global'
+import Layout from '@/components/Layout'
 import { Main, FiltersContainer, Title, Select } from '@styles/pages/Category'
 
-const Products: NextPage = () => {
+const Products: NextPageWithLayout = () => {
 	return (
 		<>
 			<Head>
@@ -50,6 +51,10 @@ const Products: NextPage = () => {
 			</Main>
 		</>
 	)
+}
+
+Products.getLayout = (page) => {
+	return <Layout>{page}</Layout>
 }
 
 export default Products

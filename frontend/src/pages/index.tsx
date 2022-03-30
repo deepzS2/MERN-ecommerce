@@ -1,11 +1,13 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
+import { ReactElement } from 'react'
 
+import { NextPageWithLayout } from '@/@types/global'
 import Categories from '@components/Categories'
+import Layout from '@components/Layout'
 import Slider from '@components/Slider'
 import { Main } from '@styles/pages/Home'
 
-const Home: NextPage = () => {
+const Home: NextPageWithLayout = () => {
 	return (
 		<>
 			<Head>
@@ -20,6 +22,10 @@ const Home: NextPage = () => {
 			</Main>
 		</>
 	)
+}
+
+Home.getLayout = function getLayout(page: ReactElement) {
+	return <Layout>{page}</Layout>
 }
 
 export default Home

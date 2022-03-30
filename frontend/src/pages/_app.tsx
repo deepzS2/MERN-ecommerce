@@ -1,21 +1,19 @@
 import type { AppProps } from 'next/app'
 
-import Announcement from '@components/Announcement'
-import Footer from '@components/Footer'
-import Navbar from '@components/Navbar'
-import Newsletter from '@components/Newsletter'
-import Products from '@components/Products'
+import { NextPageWithLayout } from '@/@types/global'
 import ContextsProviders from '@contexts/index'
 
-function MyApp({ Component, pageProps }: AppProps) {
+type AppPropsWithLayout = AppProps & {
+	Component: NextPageWithLayout
+}
+
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+	// Use the layout defined at the page level, if available
+	const getLayout = Component.getLayout ?? ((page) => page)
+
 	return (
 		<ContextsProviders>
-			<Announcement />
-			<Navbar />
-			<Component {...pageProps} />
-			<Products />
-			<Newsletter />
-			<Footer />
+			{getLayout(<Component {...pageProps} />)}
 		</ContextsProviders>
 	)
 }

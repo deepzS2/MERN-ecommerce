@@ -1,8 +1,9 @@
-import { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { MdAdd, MdRemove } from 'react-icons/md'
 
+import { NextPageWithLayout } from '@/@types/global'
+import Layout from '@/components/Layout'
 import {
 	Main,
 	ImageContainer,
@@ -12,7 +13,7 @@ import {
 	AmountContainer,
 } from '@styles/pages/Product'
 
-const Product: NextPage = () => {
+const Product: NextPageWithLayout = () => {
 	return (
 		<>
 			<Head>
@@ -71,6 +72,10 @@ const Product: NextPage = () => {
 			</Main>
 		</>
 	)
+}
+
+Product.getLayout = (page) => {
+	return <Layout>{page}</Layout>
 }
 
 export default Product
