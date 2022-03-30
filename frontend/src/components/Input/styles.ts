@@ -9,12 +9,6 @@ export const Container = styled.div<ContainerProps>`
 	flex-direction: column;
 	gap: 1rem;
 
-	label {
-		font-weight: 500;
-		font-size: 1.1em;
-		color: #000;
-	}
-
 	> div,
 	input {
 		width: 100%;
@@ -22,18 +16,6 @@ export const Container = styled.div<ContainerProps>`
 
 	> div {
 		position: relative;
-	}
-
-	input {
-		padding: 5px;
-		border: 0.5px solid
-			${({ invalid, theme }) => (invalid ? '#f00' : theme.colors.lightGray)};
-		border-radius: 5px;
-
-		&::placeholder {
-			color: darkgray;
-			font-weight: 400;
-		}
 	}
 
 	svg {

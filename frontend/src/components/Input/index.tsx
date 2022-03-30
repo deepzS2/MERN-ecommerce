@@ -13,9 +13,9 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 const Input: React.ForwardRefRenderFunction<
 	HTMLInputElement,
 	Props & Partial<UseFormRegisterReturn>
-> = ({ invalidMessage, invalid, icon, ...props }, ref) => {
+> = ({ invalidMessage, invalid, icon, className, ...props }, ref) => {
 	return (
-		<Container className="input-wrapper" invalid={invalid}>
+		<Container className={className} invalid={invalid}>
 			{props.label && <label>{props.label}</label>}
 			{icon ? (
 				<div>
