@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components'
 
+import { mobile } from '../responsive'
+
 interface FilterProps {
 	type: 'color' | 'size'
 }
@@ -11,17 +13,20 @@ interface FilterColorProps {
 export const Main = styled.main`
 	padding: 50px;
 	display: flex;
+	${mobile({ padding: '10px', flexDirection: 'column' })}
 `
 
 export const ImageContainer = styled.div`
 	flex: 1;
 	position: relative;
 	height: 90vh;
+	${mobile({ height: '40vh', minHeight: '40vh', maxHeight: '40vh' })}
 `
 
 export const InfoContainer = styled.div`
 	flex: 1;
 	padding: 0 50px;
+	${mobile({ padding: '10px' })}
 
 	h1 {
 		font-weight: 200;
@@ -41,6 +46,7 @@ export const InfoContainer = styled.div`
 		justify-content: space-between;
 		width: 50%;
 		margin: 30px 0;
+		${mobile({ width: '100%' })}
 	}
 
 	.add-amount {
@@ -48,6 +54,7 @@ export const InfoContainer = styled.div`
 		align-items: center;
 		width: 50%;
 		justify-content: space-between;
+		${mobile({ width: '100%' })}
 
 		button {
 			text-transform: uppercase;

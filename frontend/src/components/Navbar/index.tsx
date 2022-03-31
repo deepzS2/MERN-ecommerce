@@ -2,8 +2,15 @@ import React from 'react'
 import { MdSearch, MdOutlineShoppingCart } from 'react-icons/md'
 import { useTheme } from 'styled-components'
 
-import Input from '../Input'
-import { Badge, Container, Language, Logo, MenuItem, Wrapper } from './styles'
+import {
+	Badge,
+	Container,
+	Input,
+	Language,
+	Logo,
+	MenuItem,
+	Wrapper,
+} from './styles'
 
 const Navbar: React.FC = () => {
 	const { colors } = useTheme()
@@ -14,6 +21,7 @@ const Navbar: React.FC = () => {
 				<div className="left">
 					<Language>EN</Language>
 					<Input
+						placeholder="Search"
 						icon={<MdSearch size={18} color={colors.gray} />}
 						type="text"
 					/>

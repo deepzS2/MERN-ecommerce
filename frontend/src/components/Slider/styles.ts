@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { mobile } from '@styles/responsive'
+
 interface ArrowProps {
 	direction: 'left' | 'right'
 }
@@ -20,6 +22,8 @@ export const Container = styled.div`
 
 	display: flex;
 	overflow: hidden;
+
+	${mobile({ display: 'none' })}
 `
 
 export const Arrow = styled.div<ArrowProps>`

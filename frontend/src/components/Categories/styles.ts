@@ -1,9 +1,13 @@
 import styled from 'styled-components'
 
+import { mobile } from '@styles/responsive'
+
 export const Container = styled.div`
 	display: flex;
 	padding: 20px;
 	justify-content: space-between;
+
+	${mobile({ padding: '0px', flexDirection: 'column', minHeight: '100vh' })}
 `
 
 export const Item = styled.div`
@@ -12,10 +16,11 @@ export const Item = styled.div`
 	height: 70vh;
 	position: relative;
 
+	${mobile({ height: '30vh' })}
+
 	.img-container {
 		width: 100%;
 		height: 100%;
-		position: relative;
 	}
 
 	.info-container {

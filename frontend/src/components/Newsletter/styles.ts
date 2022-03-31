@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { mobile } from '@styles/responsive'
+
 export const Container = styled.div`
 	height: 60vh;
 	background-color: ${({ theme }) => theme.colors.white.thirdOption};
@@ -19,6 +21,8 @@ export const Title = styled.h1`
 export const Description = styled.div`
 	font-size: 24px;
 	font-weight: 300;
+
+	${mobile({ textAlign: 'center' })}
 `
 
 export const InputContainer = styled.div`
@@ -30,6 +34,8 @@ export const InputContainer = styled.div`
 	justify-content: space-between;
 
 	border: 1px solid ${({ theme }) => theme.colors.lightGray};
+
+	${mobile({ width: '80%' })}
 
 	.input-wrapper {
 		flex: 8;

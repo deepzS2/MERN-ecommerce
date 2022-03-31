@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 import InputComponent from '@components/Input'
 
+import { mobile } from '../responsive'
+
 export const Main = styled.main`
 	width: 100vw;
 	height: 100vh;
@@ -21,6 +23,7 @@ export const Wrapper = styled.div`
 	padding: 20px;
 	width: 40%;
 	background-color: ${({ theme }) => theme.colors.white.default};
+	${mobile({ width: '75%' })}
 
 	h1 {
 		font-size: 24px;

@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { mobile } from '../responsive'
+
 interface TopButtonProps {
 	filled?: boolean
 }
@@ -12,6 +14,7 @@ export const Main = styled.main``
 
 export const Wrapper = styled.div`
 	padding: 20px;
+	${mobile({ padding: '10px' })}
 
 	h1 {
 		font-weight: 300;
@@ -26,6 +29,8 @@ export const Wrapper = styled.div`
 		padding: 20px;
 
 		.texts {
+			${mobile({ display: 'none' })}
+
 			span {
 				text-decoration: underline;
 				cursor: pointer;
@@ -37,6 +42,7 @@ export const Wrapper = styled.div`
 	.bottom {
 		display: flex;
 		justify-content: space-between;
+		${mobile({ flexDirection: 'column' })}
 
 		.info {
 			flex: 3;
@@ -77,6 +83,7 @@ export const Hr = styled.hr`
 export const Product = styled.div`
 	display: flex;
 	justify-content: space-between;
+	${mobile({ flexDirection: 'column' })}
 
 	.product-detail {
 		flex: 2;
@@ -119,12 +126,14 @@ export const ProductAmountContainer = styled.div`
 	div {
 		font-size: 24px;
 		margin: 5px;
+		${mobile({ margin: '5px 15px' })}
 	}
 `
 
 export const ProductPrice = styled.div`
 	font-size: 30px;
 	font-weight: 200;
+	${mobile({ marginBottom: '20px' })}
 `
 
 export const SummaryItem = styled.div<SummaryItemProps>`

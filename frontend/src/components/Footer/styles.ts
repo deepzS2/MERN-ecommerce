@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 
+import { mobile } from '@styles/responsive'
+
 interface SocialIconsProps {
 	backgroundColor?: string
 }
 
 export const Container = styled.div`
 	display: flex;
+	${mobile({ flexDirection: 'column' })}
 `
 
 export const Left = styled.div`
@@ -44,6 +47,8 @@ export const Center = styled.div`
 	flex: 1;
 	padding: 20px;
 
+	${mobile({ display: 'none' })}
+
 	h3 {
 		margin-bottom: 30px;
 	}
@@ -67,6 +72,8 @@ export const Center = styled.div`
 export const Right = styled.div`
 	flex: 1;
 	padding: 20px;
+
+	${mobile({ backgroundColor: '#fff8f8' })}
 
 	h3 {
 	}
